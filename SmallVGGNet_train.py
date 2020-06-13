@@ -58,7 +58,7 @@ labels = np.array(labels)
 
 lb = LabelBinarizer()
 trainY = lb.fit_transform(trainY)
-testY = lb.fit_transform(testY)
+testY = lb.transform(testY)
 
 aug = ImageDataGenerator(rotation_range=30, width_shift_range=0.1, 
                          height_shift_range=0.1, shear_range=0.2, zoom_range=0.2,
